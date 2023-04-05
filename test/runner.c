@@ -176,7 +176,7 @@ frida_java_init_vm (JavaVM ** vm, JNIEnv ** env, gboolean enable_optimizations)
   jint (* register_natives_legacy) (JNIEnv * env, jclass clazz);
   jint result;
 
-  vm_module = dlopen ((get_system_api_level () >= 21) ? "libart.so" : "libdvm.so", RTLD_LAZY | RTLD_GLOBAL);
+  vm_module = dlopen ((get_system_api_level () >= 21) ? "libartd.so" : "libdvm.so", RTLD_LAZY | RTLD_GLOBAL);
   if (vm_module == NULL)
   {
     g_printerr ("Unable to load VM: %s\n", dlerror ());
